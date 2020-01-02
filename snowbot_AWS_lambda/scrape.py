@@ -7,9 +7,13 @@
 import requests, json, boto3
 from datetime import datetime
 
+#%%
+# Filter for specific resort
+def keep_whistler(data):
+    whis_data = data["resortID"] == 13
+    return whis_data
 
 # In[6]:
-
 
 def get_data():
     lifts_res = requests.get('http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/lifts.ashx')
@@ -19,10 +23,13 @@ def get_data():
     terrain_res = requests.get('http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/terrain.ashx')
     terrain_res.raise_for_status()
 
-    lifts_json = json.dumps({'timestamp': str(datetime.now()), 'lifts': lifts_res.json()})
+    # lifts_json = json.dumps({'timestamp': str(datetime.now()), 'lifts': lifts_res.json()})
     
-    return lifts_json
-
+    lifts = json.loads(lifts_res.text)["lifts"]
+    whis_lifts = list(filter(keep_whistler, lifts))
+    whis_lifts_json = json.dumps({'timestamp': str(datetime.now()), 'lifts': whis_lifts})
+    
+    return whis_lifts_json
 
 
 # In[7]:
@@ -31,13 +38,15 @@ def get_data():
 def handler(event, context):
     
     session = boto3.Session()
-    credentials = session.get_credentials()
-    credentials = credentials.get_frozen_credentials()
+    
+    # remove?
+    #credentials = session.get_credentials()
+    #credentials = credentials.get_frozen_credentials()
 
-    cur_dt = "{:%B %d, %Y}".format(datetime.now())
+    cur_dt = "{:%Y_%m_%d_%H:%M}".format(datetime.now())
 
     BUCKET_NAME = 'snowbot-pv'
-    FILE_NAME = cur_dt + "ADD_LABEL_HERE.json"
+    FILE_NAME = cur_dt + "_wb_lifts.json"
 
     data = get_data()
 
