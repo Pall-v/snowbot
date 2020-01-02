@@ -4,10 +4,13 @@
 # In[5]:
 
 
-import requests, json, boto3
+import requests, json, boto3, pytz
 from datetime import datetime
 
 #%%
+
+TZ = pytz.timezone('America/Vancouver')
+
 # Filter for specific resort
 def keep_whistler(data):
     whis_data = data["resortID"] == 13
@@ -27,7 +30,7 @@ def get_data():
     
     lifts = json.loads(lifts_res.text)["lifts"]
     whis_lifts = list(filter(keep_whistler, lifts))
-    whis_lifts_json = json.dumps({'timestamp': str(datetime.now()), 'lifts': whis_lifts})
+    whis_lifts_json = json.dumps({'timestamp': str(datetime.now(TZ)), 'lifts': whis_lifts})
     
     return whis_lifts_json
 
@@ -43,7 +46,7 @@ def handler(event, context):
     #credentials = session.get_credentials()
     #credentials = credentials.get_frozen_credentials()
 
-    cur_dt = "{:%Y_%m_%d_%H:%M}".format(datetime.now())
+    cur_dt = "{:%Y_%m_%d_%H:%M}".format(datetime.now(TZ))
 
     BUCKET_NAME = 'snowbot-pv'
     FILE_NAME = cur_dt + "_wb_lifts.json"
