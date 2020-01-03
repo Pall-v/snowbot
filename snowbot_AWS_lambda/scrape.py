@@ -31,12 +31,28 @@ def get_data():
     lifts = json.loads(lifts_res.text)["lifts"]
     whis_lifts = list(filter(keep_whistler, lifts))
     whis_lifts_json = json.dumps({'timestamp': str(datetime.now(TZ)), 'lifts': whis_lifts})
-    
+
     return whis_lifts_json
 
 
-# In[7]:
+#%%
 
+# new version of get data
+def get_data():
+    API_URL = 'http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/'
+    DATA_LIST = {'lifts': 'lifts', 'weather': 'snowconditions', 'terrain': 'terrains'}  # keys are used in the requests, the values and used in the response
+    json_data = dict()
+
+    for d, name in DATA_LIST.items():
+        res = requests.get(API_URL + d + '.ashx')
+        res.raise_for_status()
+        data = json.loads(res.text)[name]
+        data = list(filter(keep_whistler, data))
+        json_data[d] = json.dumps({'timestamp': str(datetime.now(TZ)), d: data})
+    
+    return json_data
+
+# In[7]:
 
 def handler(event, context):
     
@@ -49,18 +65,22 @@ def handler(event, context):
     cur_dt = "{:%Y_%m_%d_%H:%M}".format(datetime.now(TZ))
 
     BUCKET_NAME = 'snowbot-pv'
-    FILE_NAME = cur_dt + "_wb_lifts.json"
+    
 
-    data = get_data()
+    # data = get_data()
 
     # S3 Connect
     s3 = session.resource(
         's3'
     )
 
-    # Uploaded File
-    s3.Bucket(BUCKET_NAME).put_object(Key=FILE_NAME, Body=data)
-    return "Uploaded file!"
+    # Upload Files
+    for k, data in get_data().items():
+        file_name = cur_dt + "_wb_" + k + ".json"
+        print(file_name)
+        s3.Bucket(BUCKET_NAME).put_object(Key=file_name, Body=data)
+    
+    return "Uploaded files!"
 
 
 # In[8]:
