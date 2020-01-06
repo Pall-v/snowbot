@@ -62,6 +62,11 @@ functions:
     handler: scrape.handler
     events:
       - schedule: rate(15 minutes)
+
+#     Alternative (needs to be tested):
+#     Every 15th minutes from 7:00 through 19:00 in every month from November through May:
+#     - schedule: cron(0/15 7-19 * NOV-DEC,JAN-MAY ? *)
+
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
