@@ -19,6 +19,7 @@ def keep_whistler(data):
 # In[6]:
 
 def get_data():
+    """old version"""
     lifts_res = requests.get('http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/lifts.ashx')
     lifts_res.raise_for_status()
     weather_res = requests.get('http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/weather.ashx')
@@ -39,6 +40,7 @@ def get_data():
 
 # new version of get data
 def get_data():
+    """new version"""
     API_URL = 'http://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/'
     DATA_LIST = {'lifts': 'lifts', 'weather': 'snowconditions', 'terrain': 'terrains'}  # keys are used in the requests, the values and used in the response
     json_data = dict()
@@ -86,7 +88,7 @@ def handler(event, context):
 # In[8]:
 
 
-handler('', '')
+# handler('', '')
 
 
 # In[ ]:
