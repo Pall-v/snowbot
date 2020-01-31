@@ -32,7 +32,7 @@ Note: Not all directories are in use yet.  The current scope of the project uses
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+<b>├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.</b>
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
