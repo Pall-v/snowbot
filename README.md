@@ -8,6 +8,14 @@ Current state
 
 Data is pulled by and AWS Lambda function and stored in Parquet files on S3.  Most work is experimentation in notebooks at this point (January 2020).
 
+Planned Scope
+------------
+- Predictive models:
+  - Lift opening days and times
+- Data analysis:
+  - Powder accumulation since terrain was last open
+- Data Visualization web app (via Shiny)
+
 Project Organization
 ------------
 Note: Not all directories are in use yet.  The current scope of the project uses the areas in **bold** below.
@@ -32,7 +40,7 @@ Note: Not all directories are in use yet.  The current scope of the project uses
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+<b>├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.</b>
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
