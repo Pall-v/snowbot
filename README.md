@@ -1,12 +1,13 @@
 snowbot
 ==============================
 
-Scrape analyze and predict mountain conditions.
+Scrape, analyze and predict mountain conditions.
 
 Current state
 ------------
 
-Data is pulled by and AWS Lambda function and stored in Parquet files on S3.  Most work is experimentation in notebooks at this point (January 2020).
+- Data is pulled by and AWS Lambda function and stored in Parquet files on S3.  The AWS Lambda function is built using the Serverless framework.  This code is in [src/data/snowbot_AWS_lambda](src/data/snowbot_AWS_lambda).  
+- Most of the other work is experimentation in notebooks at this point (January 2020).
 
 Planned Scope
 ------------
