@@ -11,12 +11,14 @@ from datetime import datetime
 
 TZ = pytz.timezone('America/Vancouver')
 
+
 # Filter for specific resort
 def keep_whistler(data):
     whis_data = data["resortID"] == 13
     return whis_data
 
 # In[6]:
+
 
 def get_data():
     """old version"""
@@ -28,7 +30,7 @@ def get_data():
     terrain_res.raise_for_status()
 
     # lifts_json = json.dumps({'timestamp': str(datetime.now()), 'lifts': lifts_res.json()})
-    
+
     lifts = json.loads(lifts_res.text)["lifts"]
     whis_lifts = list(filter(keep_whistler, lifts))
     whis_lifts_json = json.dumps({'timestamp': str(datetime.now(TZ)), 'lifts': whis_lifts})
@@ -51,23 +53,24 @@ def get_data():
         data = json.loads(res.text)[name]
         data = list(filter(keep_whistler, data))
         json_data[d] = json.dumps({'timestamp': str(datetime.now(TZ)), d: data})
-    
+
     return json_data
 
 # In[7]:
 
+
 def handler(event, context):
-    
+
     session = boto3.Session()
-    
+
     # remove?
-    #credentials = session.get_credentials()
-    #credentials = credentials.get_frozen_credentials()
+    # credentials = session.get_credentials()
+    # credentials = credentials.get_frozen_credentials()
 
     cur_dt = "{:%Y_%m_%d_%H:%M}".format(datetime.now(TZ))
 
     BUCKET_NAME = 'snowbot-pv'
-    
+
 
     # data = get_data()
 
@@ -81,7 +84,7 @@ def handler(event, context):
         file_name = cur_dt + "_wb_" + k + ".json"
         print(file_name)
         s3.Bucket(BUCKET_NAME).put_object(Key=file_name, Body=data)
-    
+
     return "Uploaded files!"
 
 
