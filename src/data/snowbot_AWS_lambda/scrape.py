@@ -3,6 +3,12 @@
 
 # In[5]:
 
+# For dealing with the library compression that was used to overcome AWS
+# Lambda's size limitations
+try:
+  import unzip_requirements
+except ImportError:
+  pass
 
 import requests, json, boto3, pytz
 from datetime import datetime

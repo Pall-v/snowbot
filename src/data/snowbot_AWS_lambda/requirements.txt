@@ -1,3 +1,7 @@
-requests
 boto3
+botocore
 datetime
+fastparquet
+pandas
+requests
+s3fs

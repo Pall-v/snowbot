@@ -57,11 +57,22 @@ provider:
 #    - exclude-me.py
 #    - exclude-me-dir/**
 
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+
 functions:
   scrape:
     handler: scrape.handler
     events:
-      - schedule: rate(15 minutes)
+      # Every 15th minute starting at on minute after the hour
+      - schedule: cron(1/15 * * * ? *)
+  scrape_to_parquet:
+    handler: scrape_to_parquet.handler
+    events:
+      # Every 10th minute starting at on minute after the hour
+      - schedule: cron(1/10 * * * ? *)
 
 #     Alternative (needs to be tested):
 #     Every 15th minutes from 7:00 through 19:00 in every month from November through May:
@@ -124,3 +135,5 @@ plugins:
 custom:
   pythonRequirements:
     dockerizePip: true
+    slim: true
+    zip: true
