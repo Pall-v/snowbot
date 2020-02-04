@@ -125,3 +125,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Serverless directories
+.serverless
+
+src/data/snowbot_AWS_lambda/.requirements.zip
