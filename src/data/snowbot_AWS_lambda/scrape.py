@@ -10,8 +10,12 @@ try:
 except ImportError:
   pass
 
-import requests, json, boto3, pytz
+import json
 from datetime import datetime
+
+import boto3
+import pytz
+import requests
 
 #%%
 
@@ -101,7 +105,3 @@ def handler(event, context):
 
 
 # In[ ]:
-
-
-
-

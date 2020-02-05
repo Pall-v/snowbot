@@ -87,7 +87,7 @@ def set_lifts_df_datatypes(df):
 
 
 def jsons_to_df(jsons):
-    df = pd.DataFrame.from_dict(json_normalize(
+    df = pd.DataFrame.from_dict(pd.json_normalize(
         jsons, record_path='lifts', meta='timestamp'))
     df = set_lifts_df_datatypes(df)
     return df

@@ -130,3 +130,5 @@ dmypy.json
 .serverless
 
 src/data/snowbot_AWS_lambda/.requirements.zip
+
+src/data/snowbot_AWS_lambda/.requirements/
