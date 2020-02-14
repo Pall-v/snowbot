@@ -1,0 +1,190 @@
+,forecast.daycode,forecast.dayDescription,forecast.forecastString,forecast.iconName,forecast.summaryDescription,forecast.temperatureHigh,forecast.temperatureLow,weather.newSnow,weather.last24Hours,weather.last48Hours,weather.last7Days,weather.midMountainBase,resortID,timestamp
+0,0,Today,,default,"Snow, occasionally heavy. ",23,23,1,1,7,21,47,13,Fri Jan  3 00:19:09 2020
+1,0,Today,,default,"Wet snow, occasionally heavy, easing early morning and reintensifying late afternoon,",32,23,5,6,6,23,51,13,Fri Jan  3 06:19:08 2020
+2,0,Today,,default,"Wet snow, occasionally heavy, easing early morning and reintensifying late afternoon,",32,23,7,8,8,25,53,13,Fri Jan  3 07:49:08 2020
+3,0,Today,,sleet,"Cloudy with isolated showers, chance of flurries mixed in early.",34,27,7,8,8,25,53,13,Fri Jan  3 14:49:10 2020
+4,0,Today,,default,Snow developing this evening.,23,23,7,8,8,25,53,13,Fri Jan  3 15:19:09 2020
+5,0,Today,,default,Snow developing this evening.,23,23,4,10,11,28,56,13,Fri Jan  3 15:49:08 2020
+6,0,Today,,default,"Snow, gradually easing to scattered flurries in the afternoon.",27,22,13,17,24,41,65,13,Sat Jan  4 06:19:09 2020
+7,0,Today,,default,"Snow, gradually easing to scattered flurries in the afternoon.",27,22,13,17,24,41,63,13,Sat Jan  4 07:49:08 2020
+8,0,Today,,default,Cloudy with scattered flurries.,22,22,13,17,24,41,63,13,Sat Jan  4 15:19:08 2020
+9,0,Today,,default,Cloudy with scattered flurries.,22,22,0,13,23,41,63,13,Sat Jan  4 15:49:08 2020
+10,0,Today,,default,"Cloudy with scattered flurries easing in the afternoon, then sunny breaks.",29,22,4,4,20,44,65,13,Sun Jan  5 06:19:08 2020
+11,0,Today,,default,"Cloudy with scattered flurries easing in the afternoon, then sunny breaks.",29,22,4,4,21,44,64,13,Sun Jan  5 07:49:08 2020
+12,0,Today,,default,Mainly cloudy with flurries tapering off in the evening.,18,18,4,4,21,44,64,13,Sun Jan  5 15:19:08 2020
+13,0,Today,,default,Mainly cloudy with flurries tapering off in the evening.,18,18,4,8,21,48,66,13,Sun Jan  5 15:49:08 2020
+14,0,Today,,default,Mainly cloudy with flurries tapering off in the evening.,18,18,3,7,11,50,67,13,Mon Jan  6 06:00:26 2020
+15,0,Today,,default,Cloudy with afternoon flurries.,29,18,3,7,11,50,67,13,Mon Jan  6 06:15:27 2020
+16,0,Today,,default,Cloudy with afternoon flurries.,29,18,4,8,12,51,65,13,Mon Jan  6 08:00:29 2020
+17,0,Today,,default,Cloudy. Periods of snow easing to isolated flurries near noon. ,27,25,4,8,12,51,65,13,Mon Jan  6 11:15:26 2020
+18,0,Today,,default,Cloudy. Snow developing near midnight becoming occasionally heavy. ,25,25,4,8,12,51,65,13,Mon Jan  6 15:15:26 2020
+19,0,Today,,default,Cloudy. Snow developing near midnight becoming occasionally heavy. ,25,25,3,6,14,53,67,13,Mon Jan  6 15:53:42 2020
+20,0,Today,,default,Cloudy. Snow developing near midnight becoming occasionally heavy. ,25,25,5,7,14,52,69,13,Tue Jan  7 06:00:26 2020
+21,0,Today,,default,"Snow, occasionally heavy, easing to isolated flurries mid to late afternoon. ",31,16,5,7,14,52,69,13,Tue Jan  7 06:15:26 2020
+22,0,Today,,default,"Snow, occasionally heavy, easing to isolated flurries mid to late afternoon. ",31,16,6,9,16,54,69,13,Tue Jan  7 08:00:26 2020
+23,0,Today,,partly-cloudy-night,Cloudy with scattered flurries ending very early this evening then increasing clear periods. ,16,16,6,9,16,54,69,13,Tue Jan  7 15:15:26 2020
+24,0,Today,,partly-cloudy-night,Cloudy with scattered flurries ending very early this evening then increasing clear periods. ,16,16,13,19,24,61,80,13,Tue Jan  7 15:45:27 2020
+25,0,Today,,partly-cloudy-day,A mix of sun and cloud becoming overcast late in the afternoon. ,22,16,6,18,26,61,81,13,Wed Jan  8 06:15:25 2020
+26,0,Today,,partly-cloudy-day,A mix of sun and cloud becoming overcast late in the afternoon. ,22,16,6,18,26,61,80,13,Wed Jan  8 07:45:26 2020
+27,0,Today,,cloudy,Cloudy. ,16,16,6,18,26,61,80,13,Wed Jan  8 15:15:27 2020
+28,0,Today,,cloudy,Cloudy. ,16,16,0,6,24,61,78,13,Wed Jan  8 15:45:29 2020
+29,0,Today,,cloudy,Cloudy. ,16,16,0,0,18,61,78,13,Thu Jan  9 06:00:26 2020
+30,0,Today,,partly-cloudy-day,Cloudy with sunny periods. ,22,18,0,0,18,61,78,13,Thu Jan  9 06:15:26 2020
+31,0,Today,,partly-cloudy-day,Cloudy with sunny periods. ,22,18,0,0,18,61,76,13,Thu Jan  9 07:45:26 2020
+32,0,Today,,partly-cloudy-day,Sunny becoming cloudy this afternoon. ,18,18,0,0,18,61,76,13,Thu Jan  9 11:15:26 2020
+33,0,Today,,default,Cloudy with snow developing late in the evening. ,18,18,0,0,18,61,76,13,Thu Jan  9 15:15:27 2020
+34,0,Today,,default,Cloudy with snow developing late in the evening. ,18,18,0,0,6,60,76,13,Thu Jan  9 15:45:26 2020
+35,0,Today,,default,Snow easing to isolated flurries in the afternoon. ,23,14,2,2,2,55,75,13,Fri Jan 10 06:15:25 2020
+36,0,Today,,default,Snow easing to isolated flurries in the afternoon. ,23,14,3,3,3,56,76,13,Fri Jan 10 08:00:26 2020
+37,0,Today,,default,Cloudy with flurries. ,18,18,3,3,3,56,76,13,Fri Jan 10 15:15:26 2020
+38,0,Today,,default,Cloudy with flurries. ,25,18,3,6,9,46,78,13,Sat Jan 11 06:15:26 2020
+39,0,Today,,default,Cloudy with flurries. ,25,18,3,6,9,46,77,13,Sat Jan 11 08:00:26 2020
+40,0,Today,,default,Cloudy with flurries. ,18,18,3,6,9,46,77,13,Sat Jan 11 15:15:26 2020
+41,0,Today,,default,Cloudy with flurries. ,18,18,0,3,9,46,76,13,Sat Jan 11 15:45:26 2020
+42,0,Today,,default,Cloudy with light snow. Alpine temperatures cooking in the afternoon.,22,0,0,3,9,46,76,13,Sun Jan 12 06:15:26 2020
+43,0,Today,,default,Cloudy with light snow. Alpine temperatures cooking in the afternoon.,22,0,4,4,10,45,78,13,Sun Jan 12 06:30:26 2020
+44,0,Today,,default,Cloudy with light snow. Alpine temperatures cooking in the afternoon.,22,0,5,5,11,46,78,13,Sun Jan 12 08:00:27 2020
+45,0,Today,,default,Cloudy with scattered flurries easing after midnight.,0,0,5,5,11,46,78,13,Sun Jan 12 15:15:26 2020
+46,0,Today,,default,Cloudy with scattered flurries easing after midnight.,0,0,5,10,12,47,82,13,Sun Jan 12 15:45:26 2020
+47,0,Today,,default,Cloudy with scattered flurries easing after midnight.,0,0,1,6,10,45,80,13,Mon Jan 13 06:00:26 2020
+48,0,Today,,partly-cloudy-day,A mix of sun and cloud.,5,-7,1,6,10,45,80,13,Mon Jan 13 06:15:26 2020
+49,0,Today,,partly-cloudy-day,A mix of sun and cloud.,5,-7,1,6,10,45,78,13,Mon Jan 13 07:45:27 2020
+50,0,Today,,partly-cloudy-night,Cloudy with clear periods.,-7,-7,1,6,10,45,78,13,Mon Jan 13 15:15:27 2020
+51,0,Today,,partly-cloudy-night,Cloudy with clear periods.,-7,-7,0,1,10,42,78,13,Mon Jan 13 15:45:26 2020
+52,0,Today,,partly-cloudy-night,Cloudy with clear periods.,-7,-7,0,0,6,36,78,13,Tue Jan 14 06:00:26 2020
+53,0,Today,,default,Mix of sun and cloud with isolated flurries developing.,2,-5,0,0,6,36,78,13,Tue Jan 14 06:15:26 2020
+54,0,Today,,default,Mix of sun and cloud with isolated flurries developing.,2,-5,0,0,6,36,77,13,Tue Jan 14 07:45:27 2020
+55,0,Today,,night-snow,Mainly cloudy with isolated flurries.,-7,-7,0,0,6,36,77,13,Tue Jan 14 15:15:27 2020
+56,0,Today,,night-snow,Mainly cloudy with isolated flurries.,-7,-7,0,0,1,24,76,13,Tue Jan 14 15:45:26 2020
+57,0,Today,,default,Mainly cloudy with scattered flurries.,7,5,1,1,1,19,76,13,Wed Jan 15 06:15:26 2020
+58,0,Today,,default,Mainly cloudy with scattered flurries.,7,5,2,2,2,20,75,13,Wed Jan 15 07:45:27 2020
+59,0,Today,,default,Mainly cloudy with scattered flurries.,7,5,1,1,1,19,76,13,Wed Jan 15 08:00:27 2020
+60,0,Today,,default,Mainly cloudy with scattered flurries.,7,5,2,2,2,20,75,13,Wed Jan 15 08:15:26 2020
+61,0,Today,,default,Cloudy with flurries.,14,11,2,2,2,20,75,13,Wed Jan 15 11:15:26 2020
+62,0,Today,,default,Cloudy with periods of snow.,7,7,2,2,2,20,75,13,Wed Jan 15 15:15:26 2020
+63,0,Today,,default,Cloudy with periods of snow.,7,7,2,3,3,21,76,13,Wed Jan 15 15:45:27 2020
+64,0,Today,,default,Cloudy with a few flurries.,20,18,10,12,13,31,83,13,Thu Jan 16 06:15:30 2020
+65,0,Today,,default,Cloudy with a few flurries.,20,18,12,13,14,32,85,13,Thu Jan 16 08:00:26 2020
+66,0,Today,,night-snow,Cloudy with scattered flurries in the evening. Clear periods developing late in the evening. ,11,11,12,13,14,32,85,13,Thu Jan 16 15:15:26 2020
+67,0,Today,,night-snow,Cloudy with scattered flurries in the evening. Clear periods developing late in the evening. ,11,11,6,17,19,38,88,13,Thu Jan 16 15:45:26 2020
+68,0,Today,,default,Cloudy with sunny periods and isolated morning flurries. ,18,18,1,6,19,36,88,13,Fri Jan 17 06:15:26 2020
+69,0,Today,,default,Cloudy with sunny periods and isolated morning flurries. ,18,18,1,6,19,36,84,13,Fri Jan 17 08:00:26 2020
+70,0,Today,,night-snow,Becoming overcast later this evening. Periods of snow developing and temperatures increasing overnight. ,13,13,1,6,19,36,84,13,Fri Jan 17 15:15:26 2020
+71,0,Today,,night-snow,Becoming overcast later this evening. Periods of snow developing and temperatures increasing overnight. ,13,13,0,1,17,32,83,13,Fri Jan 17 15:45:26 2020
+72,0,Today,,default,Snow. ,25,25,2,2,8,32,83,13,Sat Jan 18 06:15:26 2020
+73,0,Today,,default,Snow. ,25,25,4,4,9,33,84,13,Sat Jan 18 07:45:26 2020
+74,0,Today,,default,Cloudy with periods of snow. ,23,23,4,4,9,33,84,13,Sat Jan 18 15:15:26 2020
+75,0,Today,,default,Cloudy with periods of snow. ,23,23,4,7,8,36,85,13,Sat Jan 18 15:45:28 2020
+76,0,Today,,default,Cloudy with periods of snow. ,23,23,4,8,11,36,87,13,Sun Jan 19 06:00:26 2020
+77,0,Today,,default,"Periods of light snow, easing to isolated flurries in the morning. ",31,25,4,8,11,36,87,13,Sun Jan 19 06:15:26 2020
+78,0,Today,,default,"Periods of light snow, easing to isolated flurries in the morning. ",31,25,4,8,11,36,86,13,Sun Jan 19 08:00:26 2020
+79,0,Today,,default,Flurries intensifying to wet snow this evening. ,31,31,4,8,11,36,86,13,Sun Jan 19 15:15:26 2020
+80,0,Today,,default,Flurries intensifying to wet snow this evening. ,31,31,2,6,12,32,85,13,Sun Jan 19 15:45:26 2020
+81,0,Today,,default,"Mainly cloudy with periods of wet snow, easing to scattered flurries late afternoon.",34,27,2,4,11,34,87,13,Mon Jan 20 06:15:26 2020
+82,0,Today,,default,"Mainly cloudy with periods of wet snow, easing to scattered flurries late afternoon.",34,27,2,4,11,34,82,13,Mon Jan 20 07:45:26 2020
+83,0,Today,,default,Mainly cloudy with isolated flurries.,27,27,2,4,11,34,82,13,Mon Jan 20 15:15:27 2020
+84,0,Today,,default,Mainly cloudy with isolated flurries.,27,27,4,6,11,37,84,13,Mon Jan 20 16:00:26 2020
+85,0,Today,,default,Mainly cloudy with flurries.,32,27,2,5,8,38,82,13,Tue Jan 21 06:15:26 2020
+86,0,Today,,default,Mainly cloudy with flurries.,32,27,2,6,9,39,82,13,Tue Jan 21 08:00:26 2020
+87,0,Today,,default,Periods of snow easing to flurries this afternoon. ,32,27,2,6,9,39,82,13,Tue Jan 21 11:15:26 2020
+88,0,Today,,default,Periods of snow easing to flurries this afternoon. ,32,27,8,10,15,46,89,13,Tue Jan 21 15:45:27 2020
+89,0,Today,,default,Cloudy with flurries easing after midnight to isolated.,27,27,8,10,15,46,89,13,Tue Jan 21 21:15:26 2020
+90,0,Today,,partly-cloudy-day,Cloudy with sunny periods.  Snow developing in the evening. ,29,27,5,12,17,49,90,13,Wed Jan 22 06:15:26 2020
+91,0,Today,,partly-cloudy-day,Cloudy with sunny periods. ,29,27,5,12,17,49,90,13,Wed Jan 22 11:15:26 2020
+92,0,Today,,partly-cloudy-day,Cloudy with sunny periods. ,29,27,1,6,15,48,89,13,Wed Jan 22 15:45:27 2020
+93,0,Today,,default,Cloudy with heavy snow developing this evening. ,23,23,1,6,15,48,89,13,Wed Jan 22 21:15:26 2020
+94,0,Today,,default,Cloudy with heavy snow developing this evening. ,23,23,10,10,22,46,95,13,Thu Jan 23 06:00:26 2020
+95,0,Today,,default,Heavy snow easing to flurries mid afternoon. ,32,23,10,10,22,46,95,13,Thu Jan 23 06:15:26 2020
+96,0,Today,,default,Heavy snow easing to flurries mid afternoon. ,32,23,13,13,25,49,98,13,Thu Jan 23 07:45:27 2020
+97,0,Today,,default,Cloudy with a few flurries. ,23,23,13,13,25,49,98,13,Thu Jan 23 15:15:26 2020
+98,0,Today,,default,Cloudy with a few flurries. ,23,23,3,15,20,47,98,13,Thu Jan 23 16:00:26 2020
+99,0,Today,,default,Cloudy with a few flurries. ,23,23,2,4,17,48,95,13,Fri Jan 24 06:00:26 2020
+100,0,Today,,default,Cloudy with flurries. ,31,25,2,4,17,48,95,13,Fri Jan 24 06:15:26 2020
+101,0,Today,,default,Cloudy with flurries. ,31,25,2,4,17,48,94,13,Fri Jan 24 07:45:26 2020
+102,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,2,4,17,48,94,13,Fri Jan 24 15:15:26 2020
+103,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,5,7,21,52,98,13,Fri Jan 24 15:45:26 2020
+104,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,1,6,10,50,94,13,Sat Jan 25 06:00:26 2020
+105,0,Today,,default,Periods of snow into early afternoon with sunny periods developing. ,31,25,1,6,10,50,94,13,Sat Jan 25 06:15:26 2020
+106,0,Today,,default,Periods of snow into early afternoon with sunny periods developing. ,31,25,1,6,10,50,93,13,Sat Jan 25 08:00:26 2020
+107,0,Today,,night-snow,Mainly cloudy with flurries developing early morning.,25,25,1,6,10,50,93,13,Sat Jan 25 15:15:26 2020
+108,0,Today,,night-snow,Mainly cloudy with flurries developing early morning.,25,25,1,2,8,47,93,13,Sat Jan 25 15:45:26 2020
+109,0,Today,,night-snow,Mainly cloudy with flurries developing early morning.,25,25,1,2,7,44,92,13,Sun Jan 26 06:00:26 2020
+110,0,Today,,default,"Cloudy with flurries, easing to scattered in the afternoon. ",31,23,1,2,7,44,92,13,Sun Jan 26 06:15:26 2020
+111,0,Today,,default,"Cloudy with scattered flurries, increasing to periods of snow near midnight then easing again near dawn. ",23,23,1,2,7,44,92,13,Sun Jan 26 15:15:26 2020
+112,0,Today,,default,"Cloudy with scattered flurries, increasing to periods of snow near midnight then easing again near dawn. ",23,23,3,4,6,46,93,13,Sun Jan 26 15:45:26 2020
+113,0,Today,,default,Cloudy with flurries.,29,18,3,6,8,47,94,13,Mon Jan 27 06:15:26 2020
+114,0,Today,,default,Cloudy with flurries.,29,18,4,6,8,47,94,13,Mon Jan 27 08:00:27 2020
+115,0,Today,,default,Cloudy with flurries.,22,22,4,6,8,47,94,13,Mon Jan 27 15:15:26 2020
+116,0,Today,,default,Cloudy with flurries.,22,22,0,4,8,44,93,13,Mon Jan 27 16:00:26 2020
+117,0,Today,,default,Cloudy with flurries.,22,22,4,4,10,45,97,13,Tue Jan 28 06:00:26 2020
+118,0,Today,,partly-cloudy-day,A mix of sun and cloud.,31,27,4,4,10,45,97,13,Tue Jan 28 06:15:26 2020
+119,0,Today,,partly-cloudy-day,A mix of sun and cloud.,31,27,4,4,10,46,95,13,Tue Jan 28 08:00:27 2020
+120,0,Today,,partly-cloudy-day,A mix of sun and cloud.,31,27,0,4,7,39,94,13,Tue Jan 28 16:00:27 2020
+121,0,Today,,night-snow,"Increasing cloud, with flurries developing late overnight.",23,23,0,4,7,39,94,13,Tue Jan 28 21:15:27 2020
+122,0,Today,,default,Cloudy with flurries and afternoon sunny periods. ,27,23,0,0,4,34,94,13,Wed Jan 29 06:15:26 2020
+123,0,Today,,default,Periods of snow ending this afternoon then sunny periods developing. ,27,22,3,3,7,37,95,13,Wed Jan 29 11:15:26 2020
+124,0,Today,,default,Periods of snow ending this afternoon then sunny periods developing. ,27,22,7,10,13,43,100,13,Wed Jan 29 16:00:26 2020
+125,0,Today,,partly-cloudy-night,Variable cloud. ,22,22,7,10,13,43,100,13,Wed Jan 29 21:15:26 2020
+126,0,Today,,default,Cloudy with early morning sunny periods. Periods of snow developing late in the afternoon. ,29,25,0,7,10,30,100,13,Thu Jan 30 06:15:27 2020
+127,0,Today,,default,Cloudy with early morning sunny periods. Periods of snow developing late in the afternoon. ,29,25,0,7,10,30,97,13,Thu Jan 30 08:00:26 2020
+128,0,Today,,default,Cloudy with periods of snow developing later in the afternoon. ,29,25,0,7,10,30,97,13,Thu Jan 30 11:15:26 2020
+129,0,Today,,default,"Snow, occasionally heavy. ",25,25,0,7,10,30,97,13,Thu Jan 30 15:15:26 2020
+130,0,Today,,default,"Snow, occasionally heavy. ",25,25,0,0,10,28,97,13,Thu Jan 30 15:45:26 2020
+131,0,Today,,default,"Snow, occasionally heavy. ",25,25,8,8,14,34,103,13,Fri Jan 31 06:00:26 2020
+132,0,Today,,default,Heavy snow. ,34,27,8,8,14,34,103,13,Fri Jan 31 06:15:26 2020
+133,0,Today,,default,Heavy snow. ,34,27,8,8,14,34,101,13,Fri Jan 31 07:45:27 2020
+134,0,Today,,default,Heavy snow. ,34,29,8,8,14,34,101,13,Fri Jan 31 11:15:27 2020
+135,0,Today,,default,Heavy snow. ,29,29,8,8,14,34,101,13,Fri Jan 31 15:15:26 2020
+136,0,Today,,default,Heavy snow. ,29,29,4,12,12,33,103,13,Fri Jan 31 15:45:26 2020
+137,0,Today,,default,Heavy snow. ,29,29,4,8,15,35,103,13,Sat Feb  1 06:00:26 2020
+138,0,Today,,default,Heavy snow ending mid afternoon then mainly cloud. ,34,7,4,8,15,35,103,13,Sat Feb  1 06:15:26 2020
+139,0,Today,,default,Mainly cloudy with flurries gradually easing.  Afternoon sunny breaks developing.,34,14,4,8,15,35,103,13,Sat Feb  1 11:15:27 2020
+140,0,Today,,partly-cloudy-night,Cloudy with clear periods.,14,14,4,8,15,35,103,13,Sat Feb  1 15:15:27 2020
+141,0,Today,,partly-cloudy-night,Cloudy with clear periods.,14,14,1,4,15,35,99,13,Sat Feb  1 15:45:26 2020
+142,0,Today,,default,"A mix of sun and cloud, with increasing afternoon cloud and flurries developing.",20,11,0,1,8,34,98,13,Sun Feb  2 06:15:26 2020
+143,0,Today,,default,"A mix of sun and cloud, with increasing afternoon cloud and flurries developing.",20,11,0,1,8,34,97,13,Sun Feb  2 08:00:26 2020
+144,0,Today,,night-snow,"Cloudy with flurries easing by midnight, then partial clearing.",9,9,0,1,8,34,97,13,Sun Feb  2 15:15:31 2020
+145,0,Today,,night-snow,"Cloudy with flurries easing by midnight, then partial clearing.",9,9,0,0,4,31,97,13,Sun Feb  2 15:45:26 2020
+146,0,Today,,partly-cloudy-day,Mainly sunny.,18,11,3,3,4,30,99,13,Mon Feb  3 06:15:26 2020
+147,0,Today,,partly-cloudy-day,Mainly sunny.,18,11,3,3,4,30,98,13,Mon Feb  3 07:45:26 2020
+148,0,Today,,partly-cloudy-day,Mainly sunny.,18,11,3,3,4,30,99,13,Mon Feb  3 08:00:27 2020
+149,0,Today,,partly-cloudy-day,Mainly sunny.,18,11,3,3,4,30,98,13,Mon Feb  3 08:15:26 2020
+150,0,Today,,night-snow,Increasing cloud with scattered flurries developing near dawn.,7,7,3,3,4,30,98,13,Mon Feb  3 15:15:26 2020
+151,0,Today,,night-snow,Increasing cloud with scattered flurries developing near dawn.,7,7,0,3,3,30,97,13,Mon Feb  3 15:45:26 2020
+152,0,Today,,default,"Cloudy with flurries, easing to isolated late afternoon. ",25,25,0,0,3,27,97,13,Tue Feb  4 06:16:12 2020
+153,0,Today,,default,"Cloudy with flurries, easing to isolated late afternoon. ",25,25,1,1,4,27,97,13,Tue Feb  4 08:01:12 2020
+154,0,Today,,default,Cloudy with periods of light snow developing mid evening. ,25,25,1,1,4,27,97,13,Tue Feb  4 15:16:09 2020
+155,0,Today,,default,Cloudy with periods of light snow developing mid evening. ,25,25,1,1,4,28,97,13,Tue Feb  4 15:46:09 2020
+156,0,Today,,default,Cloudy with periods of light snow developing mid evening. ,25,25,2,3,3,27,98,13,Wed Feb  5 06:01:09 2020
+157,0,Today,,default,Cloudy with scattered flurries ending in the afternoon. ,31,20,2,3,3,27,98,13,Wed Feb  5 06:31:09 2020
+158,0,Today,,default,Cloudy with scattered flurries ending in the afternoon. ,31,20,3,3,4,27,99,13,Wed Feb  5 07:46:09 2020
+159,0,Today,,default,Cloudy with scattered flurries ending in the afternoon. ,31,20,0,3,4,21,98,13,Wed Feb  5 15:46:09 2020
+160,0,Today,,default,Cloudy with periods of light snow developing overnight. ,23,23,0,3,4,21,98,13,Wed Feb  5 21:16:09 2020
+161,0,Today,,default,Periods of snow ending near noon then mainly cloudy. ,27,22,0,0,3,21,98,13,Thu Feb  6 06:16:09 2020
+162,0,Today,,default,Periods of snow ending near noon then mainly cloudy. ,27,22,1,1,4,21,98,13,Thu Feb  6 07:46:09 2020
+163,0,Today,,night-snow,Cloudy with isolated early evening flurries. Overnight clear periods developing. ,22,22,1,1,4,21,98,13,Thu Feb  6 15:16:09 2020
+164,0,Today,,night-snow,Cloudy with isolated early evening flurries. Overnight clear periods developing. ,22,22,3,4,6,24,100,13,Thu Feb  6 15:46:09 2020
+165,0,Today,,night-snow,Cloudy with isolated early evening flurries. Overnight clear periods developing. ,22,22,1,4,4,18,101,13,Fri Feb  7 06:01:10 2020
+166,0,Today,,default,Becoming overcast in the morning. Periods of snow developing after noon. ,27,23,1,4,4,18,101,13,Fri Feb  7 06:16:09 2020
+167,0,Today,,default,Becoming overcast in the morning. Periods of snow developing after noon. ,27,23,1,4,4,17,100,13,Fri Feb  7 07:46:09 2020
+168,0,Today,,default,Periods of snow ending this evening then mainly cloudy. ,23,23,1,4,4,17,100,13,Fri Feb  7 15:16:09 2020
+169,0,Today,,default,Periods of snow ending this evening then mainly cloudy. ,23,23,1,1,4,14,100,13,Fri Feb  7 15:46:09 2020
+170,0,Today,,default,Periods of snow ending this evening then mainly cloudy. ,23,23,5,5,8,15,102,13,Sat Feb  8 06:01:08 2020
+171,0,Today,,partly-cloudy-day,Cloudy becoming mainly sunny by noon. ,25,25,5,5,8,15,102,13,Sat Feb  8 06:16:08 2020
+172,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,16,16,5,5,8,15,102,13,Sat Feb  8 15:16:09 2020
+173,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,16,16,0,5,6,15,102,13,Sat Feb  8 15:46:09 2020
+174,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,16,16,0,0,5,15,102,13,Sun Feb  9 06:01:09 2020
+175,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,5,15,102,13,Sun Feb  9 06:16:09 2020
+176,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,5,15,101,13,Sun Feb  9 07:46:09 2020
+177,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,5,15,100,13,Sun Feb  9 15:46:09 2020
+178,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,12,100,13,Mon Feb 10 06:16:09 2020
+179,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,12,99,13,Mon Feb 10 15:46:09 2020
+180,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,12,98,13,Tue Feb 11 07:46:09 2020
+181,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,11,98,13,Tue Feb 11 15:46:09 2020
+182,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,9,98,13,Wed Feb 12 06:01:09 2020
+183,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,34,23,0,0,0,9,96,13,Wed Feb 12 07:46:09 2020
+184,0,Today,,partly-cloudy-day,Mainly sunny with increasing cloud late in the afternoon. ,27,22,0,0,0,9,96,13,Wed Feb 12 11:31:09 2020
+185,0,Today,,partly-cloudy-night,Cloudy with evening clear periods. ,25,25,0,0,0,9,96,13,Wed Feb 12 15:16:09 2020
+186,0,Today,,partly-cloudy-night,Cloudy with evening clear periods. ,25,25,0,0,0,8,96,13,Thu Feb 13 06:01:09 2020
+187,0,Today,,default,Mainly cloudy with a few flurries. ,29,22,0,0,0,8,96,13,Thu Feb 13 06:16:09 2020
+188,0,Today,,default,Mainly cloudy with a few flurries. ,29,22,2,2,2,10,97,13,Thu Feb 13 08:01:09 2020

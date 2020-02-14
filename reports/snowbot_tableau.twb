@@ -11,183 +11,283 @@
     <preference name='ui.shelf.height' value='26' />
   </preferences>
   <datasources>
-    <datasource caption='lifts_status_changes' inline='true' name='federated.0cblcgu1ma86is13mk8l20yjsv8q' version='18.1'>
+    <datasource caption='merged_file' inline='true' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='lifts_status_changes' name='textscan.018iy0n008r2et1gner7t1pzxyok'>
-            <connection class='textscan' cleaning='yes' compat='no' csvFile='/Users/paul/dev/snowbot/data/lifts_status_changes.csv' dataRefreshTime='' directory='/Users/paul/dev/snowbot/data' filename='/var/folders/h8/_r_m3br529zglyh_yts3wf3c0000gp/T/tableau-temp/0mugkm218vq57o15s6h2r1ht0gz6/lifts_status_changes.csv.xlsx' interpretationMode='8' password='' port='0' server='' validate='no' />
-          </named-connection>
-          <named-connection caption='lifts_status_changes_parq' name='textscan.13jh4ms11amwhk1fvao9l0bkcuel'>
-            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='lifts_status_changes_parq.csv' password='' server='' />
+          <named-connection caption='merged_file' name='semistructpassivestore-direct.02oo5wi11mul0x1dlv3tb0vfen1p'>
+            <connection class='semistructpassivestore-direct' directory='/Users/paul/dev/snowbot/data' filename='merged_file.json' password='' server=''>
+              <semistruct-schemas>
+                <semistruct-schema table='[merged_file.json]'>
+                  <map key='lifts' value='true' />
+                  <map key='lifts.Value' value='true' />
+                  <map key='{root}' value='true' />
+                </semistruct-schema>
+              </semistruct-schemas>
+            </connection>
           </named-connection>
         </named-connections>
-        <relation connection='textscan.018iy0n008r2et1gner7t1pzxyok' name='lifts_status_changes.csv' table='[/Users/paul/dev/snowbot/data/lifts_status_changes#csv]' type='table'>
-          <columns character-set='UTF-8' gridOrigin='A1:G426:no:A1:G426:1' header='yes' locale='en_CA' separator=','>
-            <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='liftID' ordinal='1' />
-            <column datatype='integer' name='resortID' ordinal='2' />
-            <column datatype='string' name='liftName' ordinal='3' />
-            <column datatype='string' name='status' ordinal='4' />
-            <column datatype='integer' name='timeToRide' ordinal='5' />
-            <column datatype='datetime' date-parse-format='yyyy-dd-MM HH:mm:ss.SSSSSSZZZZZ|#|#|EEE MMM  dd HH:mm:ss yyyy' name='timestamp' ordinal='6' />
-            <column datatype='string' name='time_diff' ordinal='7' />
-            <column datatype='real' name='time_diff_seconds' ordinal='8' />
-          </columns>
-        </relation>
+        <relation connection='semistructpassivestore-direct.02oo5wi11mul0x1dlv3tb0vfen1p' name='merged_file.json' table='[merged_file.json]' type='table' />
+        <cols>
+          <map key='[Document Index (generated)]' value='[merged_file.json].[Document Index (generated)]' />
+          <map key='[liftID]' value='[merged_file.json].[lifts.Value.liftID]' />
+          <map key='[liftName]' value='[merged_file.json].[lifts.Value.liftName]' />
+          <map key='[lifts Index (generated)]' value='[merged_file.json].[lifts.Index (generated)]' />
+          <map key='[resortID]' value='[merged_file.json].[lifts.Value.resortID]' />
+          <map key='[status]' value='[merged_file.json].[lifts.Value.status]' />
+          <map key='[timeToRide]' value='[merged_file.json].[lifts.Value.timeToRide]' />
+          <map key='[timestamp]' value='[merged_file.json].[timestamp]' />
+        </cols>
         <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:G426:no:A1:G426:1&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
           <metadata-record class='column'>
-            <remote-name>F1</remote-name>
+            <remote-name>Document Index (generated)</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>0</ordinal>
+            <local-name>[Document Index (generated)]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>Document Index (generated)</remote-alias>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>liftID</remote-name>
+            <remote-name>lifts.Index (generated)</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[liftID]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>liftID</remote-alias>
-            <ordinal>1</ordinal>
+            <local-name>[lifts Index (generated)]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Index (generated)</remote-alias>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>resortID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[resortID]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>resortID</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>liftName</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[liftName]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>liftName</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>status</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[status]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>status</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>timeToRide</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[timeToRide]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>timeToRide</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>timestamp</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[timestamp]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>timestamp</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>time_diff</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[time_diff]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>time_diff</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>time_diff_seconds</remote-name>
+            <remote-name>lifts.Value.liftID</remote-name>
             <remote-type>5</remote-type>
-            <local-name>[time_diff_seconds]</local-name>
-            <parent-name>[lifts_status_changes.csv]</parent-name>
-            <remote-alias>time_diff_seconds</remote-alias>
-            <ordinal>8</ordinal>
+            <local-name>[liftID]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Value.liftID</remote-alias>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifts.Value.liftName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[liftName]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Value.liftName</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifts.Value.resortID</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[resortID]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Value.resortID</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifts.Value.status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Value.status</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifts.Value.timeToRide</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[timeToRide]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>lifts.Value.timeToRide</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[merged_file.json]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='time_difference' datatype='datetime' datatype-customized='true' name='[Calculation_157625993330892800]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='(DATEDIFF(&apos;second&apos;, [timestamp], LOOKUP([timestamp],1)))/86400'>
-          <table-calc ordering-type='Rows' />
-        </calculation>
+      <column caption='Placeholder' datatype='integer' name='[Calculation_1068338277994426371]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='min(0)' />
       </column>
       <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
-        <calculation class='tableau' formula='[time_diff_seconds]/86400' />
+        <calculation class='tableau' formula='[Time Diff Seconds]/86400' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Document Index (generated)]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>Document Index (generated)</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Lift Area' datatype='string' name='[Lift Name (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[liftName]' new-bin='true'>
+          <bin default-name='false' value='&quot;Alpine&quot;'>
+            <value>&quot;7th Heaven Express&quot;</value>
+            <value>&quot;Glacier Express&quot;</value>
+            <value>&quot;Harmony 6 Express&quot;</value>
+            <value>&quot;Horstman T-Bar&quot;</value>
+            <value>&quot;Peak Express&quot;</value>
+            <value>&quot;Showcase T-Bar&quot;</value>
+            <value>&quot;Symphony Express&quot;</value>
+            <value>&quot;T-Bars&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Sub-alpine&quot;'>
+            <value>&quot;Big Red Express&quot;</value>
+            <value>&quot;Blackcomb Gondola Lower&quot;</value>
+            <value>&quot;Blackcomb Gondola Upper&quot;</value>
+            <value>&quot;Catskinner Express&quot;</value>
+            <value>&quot;Coca-Cola Tube Park&quot;</value>
+            <value>&quot;Creekside Gondola&quot;</value>
+            <value>&quot;Crystal Ridge Express&quot;</value>
+            <value>&quot;Emerald 6 Express&quot;</value>
+            <value>&quot;Excalibur Gondola Lower&quot;</value>
+            <value>&quot;Excalibur Gondola Upper&quot;</value>
+            <value>&quot;Excelerator Express&quot;</value>
+            <value>&quot;Fitzsimmons Express&quot;</value>
+            <value>&quot;Franz&apos;s Chair&quot;</value>
+            <value>&quot;Garbanzo Express&quot;</value>
+            <value>&quot;Jersey Cream Express&quot;</value>
+            <value>&quot;Magic Chair&quot;</value>
+            <value>&quot;Olympic Chair&quot;</value>
+            <value>&quot;Peak 2 Peak Gondola&quot;</value>
+            <value>&quot;Whistler Village Gondola Lower&quot;</value>
+            <value>&quot;Whistler Village Gondola Upper&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Mountain]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[liftName]' new-bin='true'>
+          <bin default-name='false' value='&quot;Blackcomb&quot;'>
+            <value>&quot;7th Heaven Express&quot;</value>
+            <value>&quot;Blackcomb Gondola Lower&quot;</value>
+            <value>&quot;Blackcomb Gondola Upper&quot;</value>
+            <value>&quot;Catskinner Express&quot;</value>
+            <value>&quot;Coca-Cola Tube Park&quot;</value>
+            <value>&quot;Crystal Ridge Express&quot;</value>
+            <value>&quot;Excalibur Gondola Lower&quot;</value>
+            <value>&quot;Excalibur Gondola Upper&quot;</value>
+            <value>&quot;Excelerator Express&quot;</value>
+            <value>&quot;Glacier Express&quot;</value>
+            <value>&quot;Horstman T-Bar&quot;</value>
+            <value>&quot;Jersey Cream Express&quot;</value>
+            <value>&quot;Magic Chair&quot;</value>
+            <value>&quot;Showcase T-Bar&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Whistler&quot;'>
+            <value>&quot;Big Red Express&quot;</value>
+            <value>&quot;Creekside Gondola&quot;</value>
+            <value>&quot;Emerald 6 Express&quot;</value>
+            <value>&quot;Fitzsimmons Express&quot;</value>
+            <value>&quot;Franz&apos;s Chair&quot;</value>
+            <value>&quot;Garbanzo Express&quot;</value>
+            <value>&quot;Harmony 6 Express&quot;</value>
+            <value>&quot;Olympic Chair&quot;</value>
+            <value>&quot;Peak Express&quot;</value>
+            <value>&quot;Symphony Express&quot;</value>
+            <value>&quot;T-Bars&quot;</value>
+            <value>&quot;Whistler Village Gondola Lower&quot;</value>
+            <value>&quot;Whistler Village Gondola Upper&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' is-auto-gen-lod-field='true' name='[Number of Records per lifts]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ INCLUDE [Document Index (generated)] : COUNTD([lifts Index (generated)]) }' />
+        <desc>
+          <formatted-text>
+            <run>A calculated measure that is at lifts level of detail</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='integer' is-auto-gen-lod-field='true' name='[Number of Records per merged_file.json]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Document Index (generated)])' />
+        <desc>
+          <formatted-text>
+            <run>A calculated measure that is at merged_file.json level of detail</run>
+          </formatted-text>
+        </desc>
       </column>
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <column caption='Lift ID' datatype='integer' name='[liftID]' role='dimension' type='ordinal' />
-      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
-      <column caption='Resort ID' datatype='integer' name='[resortID]' role='dimension' type='ordinal' />
-      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
-      <column caption='Time To Ride' datatype='integer' name='[timeToRide]' role='measure' type='quantitative' />
-      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Lift ID' datatype='real' name='[liftID]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>lifts.Value.liftID</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
+        <desc>
+          <formatted-text>
+            <run>lifts.Value.liftName</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[lifts Index (generated)]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>lifts.Index (generated)</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column aggregation='Sum' caption='Resort ID' datatype='real' name='[resortID]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>lifts.Value.resortID</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;H&quot;' value='Standby' />
+          <alias key='&quot;O&quot;' value='Open' />
+          <alias key='&quot;X&quot;' value='Closed' />
+        </aliases>
+        <desc>
+          <formatted-text>
+            <run>lifts.Value.status</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Time To Ride' datatype='string' name='[timeToRide]' role='dimension' type='nominal'>
+        <desc>
+          <formatted-text>
+            <run>lifts.Value.timeToRide</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Time Diff Seconds' datatype='real' name='[time_diff_seconds]' role='measure' type='quantitative' />
+      <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>timestamp</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column-instance column='[status]' derivation='Attribute' name='[attr:status:nk]' pivot='key' type='nominal' />
       <column-instance column='[Calculation_265430909502623767]' derivation='None' name='[none:Calculation_265430909502623767:vtnone:ok]' pivot='key' type='ordinal' visual-totals='None' />
       <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
       <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
       <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[Calculation_157625993330892800]' derivation='User' name='[usr:Calculation_157625993330892800:ok]' pivot='key' type='ordinal'>
-        <table-calc ordering-type='Rows' />
-      </column-instance>
       <group hidden='true' name='[Exclusions (Lift Name,Status,time_diff_days,Timestamp)]' name-style='unqualified' user:auto-column='exclude'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[none:liftName:nk]' />
@@ -196,15 +296,30 @@
           <groupfilter function='level-members' level='[none:timestamp:qk]' />
         </groupfilter>
       </group>
-      <layout dim-ordering='alphabetic' dim-percentage='0.517551' measure-ordering='alphabetic' measure-percentage='0.482449' show-structure='true' />
+      <folder name='Lifts' role='dimensions'>
+        <folder-item name='[liftID]' type='field' />
+        <folder-item name='[liftName]' type='field' />
+        <folder-item name='[lifts Index (generated)]' type='field' />
+        <folder-item name='[resortID]' type='field' />
+        <folder-item name='[status]' type='field' />
+        <folder-item name='[timeToRide]' type='field' />
+      </folder>
+      <folder name='Merged File' role='dimensions'>
+        <folder-item name='[Document Index (generated)]' type='field' />
+        <folder-item name='[timestamp]' type='field' />
+      </folder>
+      <layout dim-ordering='alphabetic' dim-percentage='0.570598' measure-ordering='alphabetic' measure-percentage='0.429402' show-structure='false' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[usr:Calculation_157625993330892800:ok]' type='palette'>
-            <map to='#8cd17d'>
-              <bucket>%missing%</bucket>
+          <encoding attr='color' field='[attr:status:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;O&quot;</bucket>
             </map>
-            <map to='#9c755f'>
-              <bucket>%null%</bucket>
+            <map to='#e15759'>
+              <bucket>&quot;X&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;H&quot;</bucket>
             </map>
           </encoding>
           <encoding attr='color' field='[none:status:nk]' type='palette'>
@@ -223,7 +338,201 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
       </semantic-values>
-      <default-date-format>L</default-date-format>
+    </datasource>
+    <datasource caption='lifts_status_changes_parq' inline='true' name='federated.05053ii0tzxa8t10e0mr00kaec6e' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='lifts_status_changes_parq' name='textscan.1bx5rgj1dnvhyp1aig8iq14y0pd1'>
+            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='lifts_status_changes_parq.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1bx5rgj1dnvhyp1aig8iq14y0pd1' name='lifts_status_changes_parq.csv' table='[lifts_status_changes_parq#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='liftID' ordinal='1' />
+            <column datatype='integer' name='resortID' ordinal='2' />
+            <column datatype='string' name='liftName' ordinal='3' />
+            <column datatype='string' name='status' ordinal='4' />
+            <column datatype='integer' name='timeToRide' ordinal='5' />
+            <column datatype='datetime' date-parse-format='EEE MMM dd HH:mm:ss yyyy' name='timestamp' ordinal='6' />
+            <column datatype='string' name='time_diff' ordinal='7' />
+            <column datatype='real' name='time_diff_seconds' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liftID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[liftID]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>liftID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resortID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[resortID]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>resortID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liftName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[liftName]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>liftName</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timeToRide</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timeToRide]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>timeToRide</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_diff</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_diff]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>time_diff</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_diff_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[time_diff_seconds]</local-name>
+            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
+            <remote-alias>time_diff_seconds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
+        <calculation class='tableau' formula='[time_diff_seconds]/86400' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Lift ID' datatype='integer' name='[liftID]' role='dimension' type='ordinal' />
+      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
+      <column caption='Resort ID' datatype='integer' name='[resortID]' role='dimension' type='ordinal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Time To Ride' datatype='integer' name='[timeToRide]' role='measure' type='quantitative' />
+      <column caption='Time Diff' datatype='string' name='[time_diff]' role='dimension' type='nominal' />
+      <column caption='Time Diff Seconds' datatype='real' name='[time_diff_seconds]' role='measure' type='quantitative' />
+      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
+      <column-instance column='[Calculation_265430909502623767]' derivation='None' name='[none:Calculation_265430909502623767:vtnone:ok]' pivot='key' type='ordinal' visual-totals='None' />
+      <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (Lift Name,Status,time_diff_days,Timestamp)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:liftName:nk]' />
+          <groupfilter function='level-members' level='[none:status:nk]' />
+          <groupfilter function='level-members' level='[none:Calculation_265430909502623767:vtnone:ok]' />
+          <groupfilter function='level-members' level='[none:timestamp:qk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.526578' measure-ordering='alphabetic' measure-percentage='0.473422' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:status:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;O&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;X&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;H&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
     </datasource>
     <datasource caption='2020_01_02_14_32_wb_lifts' inline='true' name='federated.08opw1o1eo1nck11s6rpo1owp9ss' version='18.1'>
       <connection class='federated'>
@@ -430,6 +739,65 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
       </semantic-values>
+    </datasource>
+    <datasource caption='lifts_status_changes' inline='true' name='federated.0cblcgu1ma86is13mk8l20yjsv8q' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='lifts_status_changes_parq' name='textscan.13jh4ms11amwhk1fvao9l0bkcuel'>
+            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='lifts_status_changes_parq.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='whis_lifts_status_changes' name='textscan.16qougk07a0pyf1cc5jdi1kh6hti'>
+            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='whis_lifts_status_changes.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='time_difference' datatype='datetime' datatype-customized='true' name='[Calculation_157625993330892800]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(DATEDIFF(&apos;second&apos;, [timestamp], LOOKUP([timestamp],1)))/86400'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
+        <calculation class='tableau' formula='[time_diff_seconds]/86400' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
+      <column-instance column='[Calculation_265430909502623767]' derivation='None' name='[none:Calculation_265430909502623767:vtnone:ok]' pivot='key' type='ordinal' visual-totals='None' />
+      <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_157625993330892800]' derivation='User' name='[usr:Calculation_157625993330892800:ok]' pivot='key' type='ordinal'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <group hidden='true' name='[Exclusions (Lift Name,Status,time_diff_days,Timestamp)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:liftName:nk]' />
+          <groupfilter function='level-members' level='[none:status:nk]' />
+          <groupfilter function='level-members' level='[none:Calculation_265430909502623767:vtnone:ok]' />
+          <groupfilter function='level-members' level='[none:timestamp:qk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500831' measure-ordering='alphabetic' measure-percentage='0.499169' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_157625993330892800:ok]' type='palette'>
+            <map to='#8cd17d'>
+              <bucket>%missing%</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <default-date-format>L</default-date-format>
     </datasource>
     <datasource caption='data_2019_20 (2)' inline='true' name='federated.0eybhs500l9ylc1gsy6ck1v4ikyq' version='18.1'>
       <connection class='federated'>
@@ -958,116 +1326,151 @@
         <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
       </semantic-values>
     </datasource>
-    <datasource caption='merged_file' inline='true' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' version='18.1'>
+    <datasource caption='whis_lifts_status_changes' inline='true' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='merged_file' name='semistructpassivestore-direct.02oo5wi11mul0x1dlv3tb0vfen1p'>
-            <connection class='semistructpassivestore-direct' directory='/Users/paul/dev/snowbot/data' filename='merged_file.json' password='' server=''>
-              <semistruct-schemas>
-                <semistruct-schema table='[merged_file.json]'>
-                  <map key='lifts' value='true' />
-                  <map key='lifts.Value' value='true' />
-                  <map key='{root}' value='true' />
-                </semistruct-schema>
-              </semistruct-schemas>
-            </connection>
+          <named-connection caption='whis_lifts_status_changes' name='textscan.0udvo2009kmci61h46apg0n0v5uq'>
+            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='whis_lifts_status_changes.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <relation connection='semistructpassivestore-direct.02oo5wi11mul0x1dlv3tb0vfen1p' name='merged_file.json' table='[merged_file.json]' type='table' />
-        <cols>
-          <map key='[Document Index (generated)]' value='[merged_file.json].[Document Index (generated)]' />
-          <map key='[liftID]' value='[merged_file.json].[lifts.Value.liftID]' />
-          <map key='[liftName]' value='[merged_file.json].[lifts.Value.liftName]' />
-          <map key='[lifts Index (generated)]' value='[merged_file.json].[lifts.Index (generated)]' />
-          <map key='[resortID]' value='[merged_file.json].[lifts.Value.resortID]' />
-          <map key='[status]' value='[merged_file.json].[lifts.Value.status]' />
-          <map key='[timeToRide]' value='[merged_file.json].[lifts.Value.timeToRide]' />
-          <map key='[timestamp]' value='[merged_file.json].[timestamp]' />
-        </cols>
+        <relation connection='textscan.0udvo2009kmci61h46apg0n0v5uq' name='whis_lifts_status_changes.csv' table='[whis_lifts_status_changes#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='liftID' ordinal='1' />
+            <column datatype='integer' name='resortID' ordinal='2' />
+            <column datatype='string' name='liftName' ordinal='3' />
+            <column datatype='string' name='status' ordinal='4' />
+            <column datatype='integer' name='timeToRide' ordinal='5' />
+            <column datatype='datetime' date-parse-format='EEE MMM dd HH:mm:ss yyyy' name='timestamp' ordinal='6' />
+            <column datatype='string' name='time_diff' ordinal='7' />
+            <column datatype='real' name='time_diff_seconds' ordinal='8' />
+          </columns>
+        </relation>
         <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Document Index (generated)</remote-name>
+            <remote-name>F1</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[Document Index (generated)]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>Document Index (generated)</remote-alias>
+            <local-name>[F1]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>lifts.Index (generated)</remote-name>
+            <remote-name>liftID</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[lifts Index (generated)]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Index (generated)</remote-alias>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>lifts.Value.liftID</remote-name>
-            <remote-type>5</remote-type>
             <local-name>[liftID]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Value.liftID</remote-alias>
-            <local-type>real</local-type>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>liftID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>lifts.Value.liftName</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[liftName]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Value.liftName</remote-alias>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>lifts.Value.resortID</remote-name>
-            <remote-type>5</remote-type>
+            <remote-name>resortID</remote-name>
+            <remote-type>20</remote-type>
             <local-name>[resortID]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Value.resortID</remote-alias>
-            <local-type>real</local-type>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>resortID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>lifts.Value.status</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[status]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Value.status</remote-alias>
+            <remote-name>liftName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[liftName]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>liftName</remote-alias>
+            <ordinal>3</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
+            <collation flag='0' name='LEN_RGB' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>lifts.Value.timeToRide</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[timeToRide]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
-            <remote-alias>lifts.Value.timeToRide</remote-alias>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>4</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timeToRide</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timeToRide]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>timeToRide</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>timestamp</remote-name>
-            <remote-type>130</remote-type>
+            <remote-type>7</remote-type>
             <local-name>[timestamp]</local-name>
-            <parent-name>[merged_file.json]</parent-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
             <remote-alias>timestamp</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_diff</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_diff]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>time_diff</remote-alias>
+            <ordinal>7</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_diff_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[time_diff_seconds]</local-name>
+            <parent-name>[whis_lifts_status_changes.csv]</parent-name>
+            <remote-alias>time_diff_seconds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
           </metadata-record>
         </metadata-records>
       </connection>
@@ -1075,12 +1478,8 @@
       <column caption='Placeholder' datatype='integer' name='[Calculation_1068338277994426371]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='min(0)' />
       </column>
-      <column aggregation='Sum' datatype='integer' name='[Document Index (generated)]' role='dimension' type='ordinal'>
-        <desc>
-          <formatted-text>
-            <run>Document Index (generated)</run>
-          </formatted-text>
-        </desc>
+      <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
+        <calculation class='tableau' formula='[time_diff_seconds]/86400' />
       </column>
       <column caption='Lift Area' datatype='string' name='[Lift Name (group)]' role='dimension' type='nominal'>
         <calculation class='categorical-bin' column='[liftName]' new-bin='true'>
@@ -1153,94 +1552,31 @@
           </bin>
         </calculation>
       </column>
-      <column datatype='integer' is-auto-gen-lod-field='true' name='[Number of Records per lifts]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='{ INCLUDE [Document Index (generated)] : COUNTD([lifts Index (generated)]) }' />
-        <desc>
-          <formatted-text>
-            <run>A calculated measure that is at lifts level of detail</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column datatype='integer' is-auto-gen-lod-field='true' name='[Number of Records per merged_file.json]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='COUNTD([Document Index (generated)])' />
-        <desc>
-          <formatted-text>
-            <run>A calculated measure that is at merged_file.json level of detail</run>
-          </formatted-text>
-        </desc>
-      </column>
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <column aggregation='Sum' caption='Lift ID' datatype='real' name='[liftID]' role='dimension' type='ordinal'>
-        <desc>
-          <formatted-text>
-            <run>lifts.Value.liftID</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
-        <desc>
-          <formatted-text>
-            <run>lifts.Value.liftName</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column aggregation='Sum' datatype='integer' name='[lifts Index (generated)]' role='dimension' type='ordinal'>
-        <desc>
-          <formatted-text>
-            <run>lifts.Index (generated)</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column aggregation='Sum' caption='Resort ID' datatype='real' name='[resortID]' role='dimension' type='ordinal'>
-        <desc>
-          <formatted-text>
-            <run>lifts.Value.resortID</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
-        <aliases>
-          <alias key='&quot;H&quot;' value='Standby' />
-          <alias key='&quot;O&quot;' value='Open' />
-          <alias key='&quot;X&quot;' value='Closed' />
-        </aliases>
-        <desc>
-          <formatted-text>
-            <run>lifts.Value.status</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column caption='Time To Ride' datatype='string' name='[timeToRide]' role='dimension' type='nominal'>
-        <desc>
-          <formatted-text>
-            <run>lifts.Value.timeToRide</run>
-          </formatted-text>
-        </desc>
-      </column>
-      <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
-        <desc>
-          <formatted-text>
-            <run>timestamp</run>
-          </formatted-text>
-        </desc>
-      </column>
+      <column caption='Lift ID' datatype='integer' name='[liftID]' role='dimension' type='ordinal' />
+      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
+      <column caption='Resort ID' datatype='integer' name='[resortID]' role='dimension' type='ordinal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Time To Ride' datatype='integer' name='[timeToRide]' role='measure' type='quantitative' />
+      <column caption='Time Diff' datatype='string' name='[time_diff]' role='dimension' type='nominal' />
+      <column caption='Time Diff Seconds' datatype='real' name='[time_diff_seconds]' role='measure' type='quantitative' />
+      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
       <column-instance column='[status]' derivation='Attribute' name='[attr:status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_265430909502623767]' derivation='None' name='[none:Calculation_265430909502623767:vtnone:ok]' pivot='key' type='ordinal' visual-totals='None' />
+      <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
       <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
-      <folder name='Lifts' role='dimensions'>
-        <folder-item name='[liftID]' type='field' />
-        <folder-item name='[liftName]' type='field' />
-        <folder-item name='[lifts Index (generated)]' type='field' />
-        <folder-item name='[resortID]' type='field' />
-        <folder-item name='[status]' type='field' />
-        <folder-item name='[timeToRide]' type='field' />
-      </folder>
-      <folder name='Merged File' role='dimensions'>
-        <folder-item name='[Document Index (generated)]' type='field' />
-        <folder-item name='[timestamp]' type='field' />
-      </folder>
-      <layout dim-ordering='alphabetic' dim-percentage='0.65625' measure-ordering='alphabetic' measure-percentage='0.34375' show-structure='false' />
+      <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (Lift Name,Status,time_diff_days,Timestamp)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:liftName:nk]' />
+          <groupfilter function='level-members' level='[none:status:nk]' />
+          <groupfilter function='level-members' level='[none:Calculation_265430909502623767:vtnone:ok]' />
+          <groupfilter function='level-members' level='[none:timestamp:qk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.535714' measure-ordering='alphabetic' measure-percentage='0.464286' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[attr:status:nk]' type='palette'>
@@ -1254,201 +1590,6 @@
               <bucket>&quot;H&quot;</bucket>
             </map>
           </encoding>
-          <encoding attr='color' field='[none:status:nk]' type='palette'>
-            <map to='#59a14f'>
-              <bucket>&quot;O&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;X&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;H&quot;</bucket>
-            </map>
-          </encoding>
-        </style-rule>
-      </style>
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='lifts_status_changes_parq' inline='true' name='federated.05053ii0tzxa8t10e0mr00kaec6e' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='lifts_status_changes_parq' name='textscan.1bx5rgj1dnvhyp1aig8iq14y0pd1'>
-            <connection class='textscan' directory='/Users/paul/dev/snowbot/data' filename='lifts_status_changes_parq.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <relation connection='textscan.1bx5rgj1dnvhyp1aig8iq14y0pd1' name='lifts_status_changes_parq.csv' table='[lifts_status_changes_parq#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
-            <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='liftID' ordinal='1' />
-            <column datatype='integer' name='resortID' ordinal='2' />
-            <column datatype='string' name='liftName' ordinal='3' />
-            <column datatype='string' name='status' ordinal='4' />
-            <column datatype='integer' name='timeToRide' ordinal='5' />
-            <column datatype='datetime' date-parse-format='EEE MMM dd HH:mm:ss yyyy' name='timestamp' ordinal='6' />
-            <column datatype='string' name='time_diff' ordinal='7' />
-            <column datatype='real' name='time_diff_seconds' ordinal='8' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>F1</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>liftID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[liftID]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>liftID</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>resortID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[resortID]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>resortID</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>liftName</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[liftName]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>liftName</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>status</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[status]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>status</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>timeToRide</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[timeToRide]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>timeToRide</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>timestamp</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[timestamp]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>timestamp</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>time_diff</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[time_diff]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>time_diff</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>time_diff_seconds</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[time_diff_seconds]</local-name>
-            <parent-name>[lifts_status_changes_parq.csv]</parent-name>
-            <remote-alias>time_diff_seconds</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
-        <calculation class='tableau' formula='[time_diff_seconds]/86400' />
-      </column>
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Lift ID' datatype='integer' name='[liftID]' role='dimension' type='ordinal' />
-      <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
-      <column caption='Resort ID' datatype='integer' name='[resortID]' role='dimension' type='ordinal' />
-      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
-      <column caption='Time To Ride' datatype='integer' name='[timeToRide]' role='measure' type='quantitative' />
-      <column caption='Time Diff' datatype='string' name='[time_diff]' role='dimension' type='nominal' />
-      <column caption='Time Diff Seconds' datatype='real' name='[time_diff_seconds]' role='measure' type='quantitative' />
-      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
-      <column-instance column='[Calculation_265430909502623767]' derivation='None' name='[none:Calculation_265430909502623767:vtnone:ok]' pivot='key' type='ordinal' visual-totals='None' />
-      <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
-      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
-      <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
-      <group hidden='true' name='[Exclusions (Lift Name,Status,time_diff_days,Timestamp)]' name-style='unqualified' user:auto-column='exclude'>
-        <groupfilter function='crossjoin'>
-          <groupfilter function='level-members' level='[none:liftName:nk]' />
-          <groupfilter function='level-members' level='[none:status:nk]' />
-          <groupfilter function='level-members' level='[none:Calculation_265430909502623767:vtnone:ok]' />
-          <groupfilter function='level-members' level='[none:timestamp:qk]' />
-        </groupfilter>
-      </group>
-      <layout dim-ordering='alphabetic' dim-percentage='0.526531' measure-ordering='alphabetic' measure-percentage='0.473469' show-structure='true' />
-      <style>
-        <style-rule element='mark'>
           <encoding attr='color' field='[none:status:nk]' type='palette'>
             <map to='#59a14f'>
               <bucket>&quot;O&quot;</bucket>
@@ -1551,9 +1692,9 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='merged_file' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.1wvy67g1wt3g6h1ew11of0gyjrne'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column caption='Lift Area' datatype='string' name='[Lift Name (group)]' role='dimension' type='nominal'>
               <calculation class='categorical-bin' column='[liftName]' new-bin='true'>
                 <bin default-name='false' value='&quot;Alpine&quot;'>
@@ -1627,47 +1768,24 @@
             </column>
             <column-instance column='[timestamp]' derivation='Day' name='[dy:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Hour' name='[hr:timestamp:ok]' pivot='key' type='ordinal' />
-            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.liftName</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
             <column-instance column='[timestamp]' derivation='Minute' name='[mi:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Month' name='[mn:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
             <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
-            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
-              <aliases>
-                <alias key='&quot;H&quot;' value='Standby' />
-                <alias key='&quot;O&quot;' value='Open' />
-                <alias key='&quot;X&quot;' value='Closed' />
-              </aliases>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.status</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>timestamp</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Year' name='[yr:timestamp:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[hr:timestamp:ok]' value='29' />
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]' value='28' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[hr:timestamp:ok]' value='29' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]' value='28' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='display' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]' value='false' />
+            <format attr='display' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]' value='false' />
           </style-rule>
         </style>
         <panes>
@@ -1677,7 +1795,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='pane'>
@@ -1689,8 +1807,8 @@
             </style>
           </pane>
         </panes>
-        <rows>([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)] / ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain] / [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]))</rows>
-        <cols>([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok] / ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mn:timestamp:ok] / ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[dy:timestamp:ok] / ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[hr:timestamp:ok] / [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]))))</cols>
+        <rows>([federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)] / ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain] / [federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]))</rows>
+        <cols>([federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok] / ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok] / ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[dy:timestamp:ok] / ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[hr:timestamp:ok] / [federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]))))</cols>
       </table>
       <simple-id uuid='{CF19F586-1043-4507-B393-15B04F09D8E8}' />
     </worksheet>
@@ -1698,9 +1816,9 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='merged_file' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.1wvy67g1wt3g6h1ew11of0gyjrne'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column caption='ATTR([Timestamp])-LOOKUP(ATTR([Timestamp]), -1)' datatype='real' name='[Calculation_26669759692615683]' role='measure' type='quantitative' user:unnamed='Sheet 6'>
               <calculation class='tableau' formula='ATTR([timestamp])-LOOKUP(ATTR([timestamp]), -1)'>
                 <table-calc ordering-type='Rows' />
@@ -1782,35 +1900,12 @@
                 </bin>
               </calculation>
             </column>
-            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.liftName</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
             <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
             <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
             <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
-            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
-              <aliases>
-                <alias key='&quot;H&quot;' value='Standby' />
-                <alias key='&quot;O&quot;' value='Open' />
-                <alias key='&quot;X&quot;' value='Closed' />
-              </aliases>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.status</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>timestamp</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
             <column-instance column='[Calculation_26669759692615683]' derivation='User' name='[usr:Calculation_26669759692615683:qk]' pivot='key' type='quantitative'>
               <table-calc ordering-type='Columns' />
             </column-instance>
@@ -1828,17 +1923,17 @@
             </view>
             <mark class='GanttBar' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
           </pane>
-          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:timestamp:qk]'>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='GanttBar' />
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -1846,14 +1941,14 @@
               </style-rule>
             </style>
           </pane>
-          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_26669759692615683:qk]'>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_26669759692615683:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='GanttBar' />
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -1861,18 +1956,18 @@
               </style-rule>
             </style>
           </pane>
-          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_26669759696773131:qk]'>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_26669759696773131:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='GanttBar' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
           </pane>
         </panes>
-        <rows>([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)] / ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain] / [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]))</rows>
-        <cols>([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:timestamp:qk] + ([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_26669759692615683:qk] + [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_26669759696773131:qk]))</cols>
+        <rows>([federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)] / ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain] / [federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]))</rows>
+        <cols>([federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk] + ([federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_26669759692615683:qk] + [federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_26669759696773131:qk]))</cols>
       </table>
       <simple-id uuid='{660FC254-837E-4D64-990B-D506E7D38672}' />
     </worksheet>
@@ -1880,50 +1975,27 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='merged_file' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.1wvy67g1wt3g6h1ew11of0gyjrne'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column-instance column='[timestamp]' derivation='Day' name='[dy:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Hour' name='[hr:timestamp:ok]' pivot='key' type='ordinal' />
-            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.liftName</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
             <column-instance column='[timestamp]' derivation='Minute' name='[mi:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Month' name='[mn:timestamp:ok]' pivot='key' type='ordinal' />
             <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
             <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
-            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
-              <aliases>
-                <alias key='&quot;H&quot;' value='Standby' />
-                <alias key='&quot;O&quot;' value='Open' />
-                <alias key='&quot;X&quot;' value='Closed' />
-              </aliases>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.status</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>timestamp</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
             <column-instance column='[timestamp]' derivation='Minute-Trunc' name='[tmi:timestamp:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]' value='27' />
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[hr:timestamp:ok]' value='27' />
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[tmi:timestamp:qk]' value='27' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]' value='27' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[hr:timestamp:ok]' value='27' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tmi:timestamp:qk]' value='27' />
           </style-rule>
         </style>
         <panes>
@@ -1933,8 +2005,8 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
-              <text column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
+              <text column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -1948,8 +2020,8 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</rows>
-        <cols>(([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mn:timestamp:ok] / [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[dy:timestamp:ok]) * [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[tmi:timestamp:qk])</cols>
+        <rows>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</rows>
+        <cols>(([federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok] / [federated.14wh5e10nsqko51ay64yo1ykvbuk].[dy:timestamp:ok]) * [federated.14wh5e10nsqko51ay64yo1ykvbuk].[tmi:timestamp:qk])</cols>
       </table>
       <simple-id uuid='{8AF9394B-D388-40C1-AAF3-CD0A3FC0B2C5}' />
     </worksheet>
@@ -1957,51 +2029,28 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='merged_file' name='federated.1wvy67g1wt3g6h1ew11of0gyjrne' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.1wvy67g1wt3g6h1ew11of0gyjrne'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column caption='Placeholder' datatype='integer' name='[Calculation_1068338277994426371]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='min(0)' />
             </column>
-            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal'>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.liftName</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Lift Name' datatype='string' name='[liftName]' role='dimension' type='nominal' />
             <column-instance column='[liftName]' derivation='None' name='[none:liftName:nk]' pivot='key' type='nominal' />
             <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
             <column-instance column='[timestamp]' derivation='None' name='[none:timestamp:qk]' pivot='key' type='quantitative' />
-            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
-              <aliases>
-                <alias key='&quot;H&quot;' value='Standby' />
-                <alias key='&quot;O&quot;' value='Open' />
-                <alias key='&quot;X&quot;' value='Closed' />
-              </aliases>
-              <desc>
-                <formatted-text>
-                  <run>lifts.Value.status</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column caption='Timestamp' datatype='datetime' datatype-customized='true' name='[timestamp]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>timestamp</run>
-                </formatted-text>
-              </desc>
-            </column>
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
             <column-instance column='[Calculation_1068338277994426371]' derivation='User' name='[usr:Calculation_1068338277994426371:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='display' class='0' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_1068338277994426371:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_1068338277994426371:qk]' scope='rows' value='false' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]' value='172' />
+            <format attr='width' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]' value='172' />
           </style-rule>
         </style>
         <panes>
@@ -2012,8 +2061,8 @@
             <mark class='Line' />
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
-              <text column='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
+              <text column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2032,8 +2081,8 @@
             </style>
           </pane>
         </panes>
-        <rows>([federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk] * [federated.1wvy67g1wt3g6h1ew11of0gyjrne].[usr:Calculation_1068338277994426371:qk])</rows>
-        <cols>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:timestamp:qk]</cols>
+        <rows>([federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk] * [federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_1068338277994426371:qk])</rows>
+        <cols>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]</cols>
       </table>
       <simple-id uuid='{72607584-BE1D-403D-87F4-C59FDBCA1B2A}' />
     </worksheet>
@@ -2041,9 +2090,9 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='lifts_status_changes_parq' name='federated.05053ii0tzxa8t10e0mr00kaec6e' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.05053ii0tzxa8t10e0mr00kaec6e'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
               <calculation class='tableau' formula='[time_diff_seconds]/86400' />
             </column>
@@ -2067,9 +2116,9 @@
             </view>
             <mark class='GanttBar' />
             <encodings>
-              <size column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:vtnone:qk]' />
-              <text column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:vtnone:ok]' />
-              <color column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]' />
+              <size column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:vtnone:qk]' />
+              <text column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:vtnone:ok]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2079,8 +2128,8 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftName:nk]</rows>
-        <cols>[federated.05053ii0tzxa8t10e0mr00kaec6e].[tdy:timestamp:qk]</cols>
+        <rows>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</rows>
+        <cols>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tdy:timestamp:qk]</cols>
       </table>
       <simple-id uuid='{26B279BE-9A99-46D2-BEFD-852392CDA8B6}' />
     </worksheet>
@@ -2088,9 +2137,9 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='lifts_status_changes_parq' name='federated.05053ii0tzxa8t10e0mr00kaec6e' />
+            <datasource caption='whis_lifts_status_changes' name='federated.14wh5e10nsqko51ay64yo1ykvbuk' />
           </datasources>
-          <datasource-dependencies datasource='federated.05053ii0tzxa8t10e0mr00kaec6e'>
+          <datasource-dependencies datasource='federated.14wh5e10nsqko51ay64yo1ykvbuk'>
             <column caption='time_diff_days' datatype='real' name='[Calculation_265430909502623767]' role='dimension' type='ordinal' visual-totals='None'>
               <calculation class='tableau' formula='[time_diff_seconds]/86400' />
             </column>
@@ -2107,12 +2156,9 @@
           <aggregation value='true' />
         </view>
         <style>
-          <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:timestamp:qk]' field-type='quantitative' max='#2020-02-06 12:18:54.177#' min='#2020-02-06 08:15:48.482#' range-type='fixed' scope='cols' type='space' />
-          </style-rule>
           <style-rule element='cell'>
-            <format attr='text-format' data-class='total' field='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:timestamp:qk]' value='*' />
-            <format attr='height' field='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftName:nk]' value='39' />
+            <format attr='text-format' data-class='total' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]' value='*' />
+            <format attr='height' field='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]' value='39' />
           </style-rule>
         </style>
         <panes>
@@ -2122,9 +2168,9 @@
             </view>
             <mark class='GanttBar' />
             <encodings>
-              <color column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]' />
-              <size column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:vtnone:qk]' />
-              <lod column='[federated.05053ii0tzxa8t10e0mr00kaec6e].[tmi:timestamp:ok]' />
+              <color column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' />
+              <size column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:vtnone:qk]' />
+              <lod column='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tmi:timestamp:ok]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2138,18 +2184,18 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftName:nk]</rows>
-        <cols>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:timestamp:qk]</cols>
+        <rows>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</rows>
+        <cols>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]</cols>
         <table-calculations>
           <partitionable-measures>
-            <column>[federated.05053ii0tzxa8t10e0mr00kaec6e].[attr:timestamp:ok]</column>
+            <column>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[attr:timestamp:ok]</column>
           </partitionable-measures>
         </table-calculations>
       </table>
       <simple-id uuid='{D755F4BB-BA74-469B-89DD-0C92D6E9C2B0}' />
     </worksheet>
   </worksheets>
-  <windows source-height='156'>
+  <windows source-height='177'>
     <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
@@ -2212,16 +2258,16 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -2249,7 +2295,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='1' param='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' type='color' />
+            <card pane-specification-id='1' param='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -2260,28 +2306,28 @@
               <tuple-descriptor>
                 <pane-descriptor>
                   <x-fields>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mn:timestamp:ok]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[dy:timestamp:ok]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[hr:timestamp:ok]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[dy:timestamp:ok]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[hr:timestamp:ok]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]</field>
                   </x-fields>
                   <y-fields>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain]</field>
-                    <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain]</field>
+                    <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
                   </y-fields>
                 </pane-descriptor>
                 <columns>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[dy:timestamp:ok]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[hr:timestamp:ok]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mi:timestamp:ok]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mn:timestamp:ok]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]</field>
-                  <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[dy:timestamp:ok]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[hr:timestamp:ok]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mi:timestamp:ok]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+                  <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
                 </columns>
               </tuple-descriptor>
               <tuple>
@@ -2300,15 +2346,15 @@
         </selection-collection>
         <highlight>
           <color-one-way>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Area]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[mn:timestamp:ok]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftID:ok]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[qr:timestamp:ok]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Area]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftID:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[qr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -2334,21 +2380,16 @@
             <card type='title' />
           </strip>
         </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='4' param='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' type='color' />
-          </strip>
-        </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Lift Name (group)]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[Mountain]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:timestamp:qk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Lift Name (group)]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[Mountain]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -2374,11 +2415,6 @@
             <card type='title' />
           </strip>
         </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='2' param='[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]' type='color' />
-          </strip>
-        </edge>
       </cards>
       <viewpoint>
         <highlight>
@@ -2386,10 +2422,10 @@
             <field>[federated.08opw1o1eo1nck11s6rpo1owp9ss].[none:liftName:nk]</field>
             <field>[federated.08opw1o1eo1nck11s6rpo1owp9ss].[none:status:nk]</field>
             <field>[federated.08opw1o1eo1nck11s6rpo1owp9ss].[yr:timestamp:ok]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:Calculation_1068338277993893889:qk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:liftName:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[none:status:nk]</field>
-            <field>[federated.1wvy67g1wt3g6h1ew11of0gyjrne].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_1068338277993893889:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -2417,27 +2453,27 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='2' param='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]' type='color' />
+            <card pane-specification-id='2' param='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[dy:timestamp:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[mn:timestamp:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:vtnone:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftName:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:time_diff:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:timestamp:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[qr:timestamp:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[tdy:timestamp:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[thr:timestamp:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[tmi:timestamp:qk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[usr:Calculation_157625993330892800:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[dy:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[mn:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:vtnone:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:time_diff:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[qr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tdy:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[thr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tmi:timestamp:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_157625993330892800:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -2465,23 +2501,23 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:Calculation_265430909502623767:vtnone:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftID:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:liftName:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:status:nk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[none:timestamp:qk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[thr:timestamp:qk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[tmi:timestamp:qk]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[usr:Calculation_157625993330892800:ok:2]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[usr:Calculation_157625993330892800:ok]</field>
-            <field>[federated.05053ii0tzxa8t10e0mr00kaec6e].[yr:timestamp:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:Calculation_265430909502623767:vtnone:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftID:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:liftName:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:status:nk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[none:timestamp:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[thr:timestamp:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[tmi:timestamp:qk]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_157625993330892800:ok:2]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[usr:Calculation_157625993330892800:ok]</field>
+            <field>[federated.14wh5e10nsqko51ay64yo1ykvbuk].[yr:timestamp:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
@@ -4639,131 +4675,393 @@
     </thumbnail>
     <thumbnail height='192' name='via_status_changes' width='192'>
       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
-      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
-      AAAASUVORK5CYII=
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
