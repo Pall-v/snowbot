@@ -1,22 +1,18 @@
-import pandas as pd
-
-
-import json, glob, boto3, os
-import pdb
-import pandas as pd
-from fastparquet import write, ParquetFile
-import pytz
-import s3fs
-import botocore
-from collections import Iterable
-from typing import List, Union
-from copy import deepcopy
+import json
+import os
 import warnings
-import time
-
-import requests
+from collections.abc import Iterable
+from copy import deepcopy
 from datetime import datetime
+from typing import List, Union
 
+import boto3
+import botocore
+import pandas as pd
+import pytz
+import requests
+import s3fs
+from fastparquet import ParquetFile, write
 
 session = boto3.Session()
 BUCKET_NAME = 'snowbot-pv'
@@ -368,8 +364,6 @@ def write_dataframe_to_parquet_on_s3(df, topic, fname):
 
     # Unshift the timezone because parquet engines don't handle shifted timezones
     df.loc[:, 'timestamp'] = df.loc[:, 'timestamp'].dt.tz_convert(pytz.utc)
-
-    s3_object = bucket.Object(fname)
 
     if not list(bucket.objects.filter(Prefix=fname)):
         print(f"File {fname} not found.  Creating new file.")
