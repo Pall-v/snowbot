@@ -188,3 +188,78 @@
 186,0,Today,,partly-cloudy-night,Cloudy with evening clear periods. ,25,25,0,0,0,8,96,13,Thu Feb 13 06:01:09 2020
 187,0,Today,,default,Mainly cloudy with a few flurries. ,29,22,0,0,0,8,96,13,Thu Feb 13 06:16:09 2020
 188,0,Today,,default,Mainly cloudy with a few flurries. ,29,22,2,2,2,10,97,13,Thu Feb 13 08:01:09 2020
+189,0,Today,,default,Mainly cloudy with isolated flurries. ,22,22,2,2,2,10,97,13,Thu Feb 13 15:16:09 2020
+190,0,Today,,default,Mainly cloudy with isolated flurries. ,22,22,3,4,4,9,99,13,Thu Feb 13 15:46:09 2020
+191,0,Today,,default,Mainly cloudy with isolated flurries. ,22,22,1,3,4,9,99,13,Fri Feb 14 06:01:09 2020
+192,0,Today,,default,Cloudy with sunny periods. ,25,22,1,3,4,9,99,13,Fri Feb 14 06:16:04 2020
+193,0,Today,,default,Cloudy with sunny periods. ,25,22,1,3,4,9,98,13,Fri Feb 14 07:46:09 2020
+194,0,Today,,default,Cloudy. Periods of light snow developing overnight.,22,22,1,3,4,9,98,13,Fri Feb 14 15:16:09 2020
+195,0,Today,,default,Cloudy. Periods of light snow developing overnight.,22,22,0,1,4,9,97,13,Fri Feb 14 16:01:09 2020
+196,0,Today,,default,Cloudy. Periods of light snow developing overnight.,22,22,2,2,5,6,99,13,Sat Feb 15 06:01:09 2020
+197,0,Today,,default,Cloudy with flurries.,29,23,2,2,5,6,99,13,Sat Feb 15 06:16:09 2020
+198,0,Today,,default,Cloudy with flurries.,29,23,2,2,5,6,97,13,Sat Feb 15 07:46:09 2020
+199,0,Today,,night-snow,Mainly cloudy with isolated flurries.,22,22,2,2,5,6,97,13,Sat Feb 15 15:16:09 2020
+200,0,Today,,night-snow,Mainly cloudy with isolated flurries.,22,22,0,2,2,6,99,13,Sat Feb 15 15:46:09 2020
+201,0,Today,,night-snow,Mainly cloudy with isolated flurries.,22,22,0,0,2,6,99,13,Sun Feb 16 06:01:09 2020
+202,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,25,18,0,0,2,6,99,13,Sun Feb 16 06:16:09 2020
+203,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,25,18,0,0,2,6,96,13,Sun Feb 16 07:46:09 2020
+204,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,0,0,2,6,96,13,Sun Feb 16 15:16:09 2020
+205,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,1,1,2,6,97,13,Sun Feb 16 15:46:09 2020
+206,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,0,1,1,6,96,13,Mon Feb 17 06:01:09 2020
+207,0,Today,,partly-cloudy-day,Mainly sunny.,29,14,0,1,1,6,96,13,Mon Feb 17 06:16:09 2020
+208,0,Today,,partly-cloudy-night,Clear with cloudy periods.,14,14,0,1,1,6,96,13,Mon Feb 17 15:16:09 2020
+209,0,Today,,partly-cloudy-night,Clear with cloudy periods.,14,14,0,0,1,6,96,13,Mon Feb 17 15:46:09 2020
+210,0,Today,,clear-day,Sunny. ,29,16,0,0,1,6,96,13,Tue Feb 18 06:16:09 2020
+211,0,Today,,clear-night,Clear.,20,20,0,0,1,6,96,13,Tue Feb 18 15:16:09 2020
+212,0,Today,,clear-night,Clear.,20,20,0,0,0,6,96,13,Tue Feb 18 15:46:09 2020
+213,0,Today,,clear-day,Sunny. ,34,20,0,0,0,6,96,13,Wed Feb 19 06:16:09 2020
+214,0,Today,,clear-night,Clear. ,20,20,0,0,0,6,96,13,Wed Feb 19 15:16:09 2020
+215,0,Today,,clear-night,Clear. ,20,20,0,0,0,6,95,13,Wed Feb 19 15:46:09 2020
+216,0,Today,,clear-night,Clear. ,20,20,0,0,0,5,95,13,Thu Feb 20 06:01:08 2020
+217,0,Today,,partly-cloudy-day,Sunny with cloudy periods. ,32,20,0,0,0,5,95,13,Thu Feb 20 06:16:09 2020
+218,0,Today,,partly-cloudy-day,Sunny with cloudy periods. ,32,20,0,0,0,5,94,13,Thu Feb 20 07:46:09 2020
+219,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,20,20,0,0,0,5,94,13,Thu Feb 20 15:16:09 2020
+220,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,20,20,0,0,0,3,94,13,Thu Feb 20 16:01:10 2020
+221,0,Today,,partly-cloudy-night,Clear with cloudy periods. ,20,20,0,0,0,2,94,13,Fri Feb 21 06:01:09 2020
+222,0,Today,,partly-cloudy-day,Sunny with increasing afternoon cloud. ,29,18,0,0,0,2,94,13,Fri Feb 21 06:17:15 2020
+223,0,Today,,default,Mainly cloudy with overnight flurries. ,25,25,0,0,0,2,94,13,Fri Feb 21 15:16:09 2020
+224,0,Today,,default,"Cloudy with morning flurries, becoming a mix of sun and cloud in the afternoon. ",31,22,4,4,4,4,97,13,Sat Feb 22 06:16:09 2020
+225,0,Today,,default,"Cloudy with morning flurries, becoming a mix of sun and cloud in the afternoon. ",31,22,5,5,5,5,98,13,Sat Feb 22 08:01:10 2020
+226,0,Today,,default,Cloudy with flurries developing in the early morning hours.,22,22,5,5,5,5,98,13,Sat Feb 22 15:16:09 2020
+227,0,Today,,default,Cloudy with flurries developing in the early morning hours.,22,22,5,5,5,5,97,13,Sat Feb 22 16:01:10 2020
+228,0,Today,,default,Cloudy with flurries developing in the early morning hours.,22,22,1,1,6,6,98,13,Sun Feb 23 06:01:09 2020
+229,0,Today,,default,Cloudy with periods of snow. ,29,18,1,1,6,6,98,13,Sun Feb 23 06:16:08 2020
+230,0,Today,,default,Cloudy with periods of snow. ,29,18,4,4,8,9,100,13,Sun Feb 23 07:46:09 2020
+231,0,Today,,default,Cloudy with a few flurries in the evening.,18,18,4,4,8,9,100,13,Sun Feb 23 15:16:09 2020
+232,0,Today,,default,Cloudy with a few flurries in the evening.,18,18,8,8,12,12,103,13,Sun Feb 23 15:46:09 2020
+233,0,Today,,default,Cloudy with a few flurries in the evening.,18,18,6,6,9,13,103,13,Mon Feb 24 06:01:09 2020
+234,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,27,18,6,6,9,13,103,13,Mon Feb 24 06:16:09 2020
+235,0,Today,,partly-cloudy-day,A mix of sun and cloud. ,27,18,6,6,9,13,102,13,Mon Feb 24 07:46:09 2020
+236,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,6,6,9,13,102,13,Mon Feb 24 15:16:09 2020
+237,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,2,2,9,13,101,13,Mon Feb 24 16:01:09 2020
+238,0,Today,,partly-cloudy-night,Cloudy with clear periods.,16,16,0,0,6,13,101,13,Tue Feb 25 06:01:09 2020
+239,0,Today,,default,Mainly cloudy with scattered flurries. ,31,25,0,0,6,13,101,13,Tue Feb 25 06:16:09 2020
+240,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,0,0,6,13,101,13,Tue Feb 25 15:16:09 2020
+241,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,1,1,2,14,101,13,Tue Feb 25 16:01:09 2020
+242,0,Today,,night-snow,Mainly cloudy with isolated flurries. ,25,25,1,1,1,14,101,13,Wed Feb 26 06:01:09 2020
+243,0,Today,,default,Mainly cloudy with isolated morning flurries.,32,22,1,1,1,14,101,13,Wed Feb 26 06:16:09 2020
+244,0,Today,,default,Mainly cloudy with isolated morning flurries.,32,22,1,1,1,14,100,13,Wed Feb 26 07:46:09 2020
+245,0,Today,,default,Cloudy with isolated flurries developing.,22,22,1,1,1,14,100,13,Wed Feb 26 15:16:09 2020
+246,0,Today,,default,Cloudy with isolated flurries developing.,22,22,0,0,1,14,99,13,Wed Feb 26 15:46:09 2020
+247,0,Today,,night-snow,Mainly cloudy with isolated flurries.,23,23,0,0,1,14,99,13,Thu Feb 27 15:16:09 2020
+248,0,Today,,night-snow,Mainly cloudy with isolated flurries.,23,23,0,0,0,14,99,13,Thu Feb 27 15:46:09 2020
+249,0,Today,,default,Cloudy with a few flurries. ,27,18,0,0,0,14,99,13,Fri Feb 28 06:16:09 2020
+250,0,Today,,default,Cloudy with a few flurries developing after noon. ,31,18,0,0,0,14,99,13,Fri Feb 28 07:16:09 2020
+251,0,Today,,default,Cloudy with a few flurries developing after noon. ,31,18,1,1,1,14,99,13,Fri Feb 28 07:46:09 2020
+252,0,Today,,default,Cloudy with a few flurries. ,20,20,1,1,1,14,99,13,Fri Feb 28 15:16:04 2020
+253,0,Today,,default,Cloudy with a few flurries. ,20,20,2,2,2,15,99,13,Fri Feb 28 16:01:10 2020
+254,0,Today,,default,Cloudy with a few flurries. ,20,20,9,9,9,18,106,13,Sat Feb 29 06:01:09 2020
+255,0,Today,,default,Mainly cloudy with isolated morning flurries. Afternoon sunny periods developing. ,27,18,9,9,9,18,106,13,Sat Feb 29 06:16:09 2020
+256,0,Today,,default,Mainly cloudy with isolated morning flurries. Afternoon sunny periods developing. ,27,18,9,9,9,18,104,13,Sat Feb 29 07:46:09 2020
+257,0,Today,,partly-cloudy-night,Clear with cloudy periods.,18,18,9,9,9,18,104,13,Sat Feb 29 15:16:09 2020
+258,0,Today,,partly-cloudy-night,Clear with cloudy periods.,18,18,8,8,9,18,103,13,Sat Feb 29 16:01:09 2020
+259,0,Today,,default,"A mix of sun, with increasing cloud mid afternoon.  Scattered flurries developing.",27,22,1,1,10,15,103,13,Sun Mar  1 06:16:09 2020
+260,0,Today,,default,"A mix of sun, with increasing cloud mid afternoon.  Scattered flurries developing.",27,22,2,2,10,16,103,13,Sun Mar  1 08:01:09 2020
+261,0,Today,,default,Mainly cloudy with isolated flurries.,22,22,2,2,10,16,103,13,Sun Mar  1 15:16:13 2020
+262,0,Today,,default,Mainly cloudy with isolated flurries.,22,22,2,2,9,12,102,13,Sun Mar  1 16:01:09 2020
+263,0,Today,,default,Mainly cloudy with isolated flurries.,29,23,1,1,2,11,102,13,Mon Mar  2 06:16:09 2020
